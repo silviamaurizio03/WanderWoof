@@ -1,0 +1,122 @@
+body {
+    background-color: wite;
+    font-family: Playfair Display, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center; /* Centra tutto il contenuto */
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Breating', sans-serif; /* Utilizza il nuovo font */
+    font-size: 58px; /* nome principale */
+    color: black;
+    margin: 0; /* Rimuovi margine superiore */
+    font-weight: 700; /* Grassetto per il titolo */
+}
+
+.button-container {
+    display: flex; /* Usa Flexbox per il layout */
+    justify-content: space-between; /* Distribuisci i pulsanti su tutta la larghezza */
+    align-items: center; /* Allinea verticalmente i pulsanti con la scritta */
+    margin: -50px 0 20px 0; /* Margine negativo per sollevare i pulsanti */
+    padding: 0 20%; /* Sposta i pulsanti verso l'interno */
+}
+
+.video-container {
+    position: relative; /* Mantieni il contenitore video come riferimento per il posizionamento */
+    margin: 20px 0; /* Margine per distanziare dal contenuto */
+}
+
+video {
+    width: 90%; /* Allarga il video al 90% del contenitore */
+    height: auto; /* Mantiene il rapporto di aspetto */
+    filter: brightness(0.5) contrast(1.5); /* Rende il video più scuro e lucente */
+}
+
+.description {
+    position: absolute; /* Posizionamento assoluto */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-50%); /* Centra perfettamente */
+    color: silver; /* Cambia il colore per renderlo visibile */
+    font-size: 48px; /* Aumenta la dimensione del font */
+    text-align: center; /* Centra il testo */
+    z-index: 1; /* Assicurati che sia sopra il video */
+    font-family: 'Poppins', sans-serif; /* Font tondeggiante */
+    font-weight: 600; /* Grassetto per le descrizioni */
+}
+
+/* Posizionamento specifico per le descrizioni */
+.description:nth-of-type(1) {
+    top: 10%; /* Posizione della prima descrizione */
+}
+
+.description:nth-of-type(2) {
+    top: 70%; /* Posizione della seconda descrizione più in basso */
+}
+
+.button {
+    padding: 8px 16px; /* Riduci il padding per i pulsanti */
+    background-color: #FFD700; /* Marrone #8B4513*/
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0; /* Rimuovi margini dai pulsanti */
+}
+
+.button:hover {
+    background-color: #6B3F12; /* Un marrone più scuro per l'effetto hover */
+}
+
+/* Stile per l'immagine lampeggiante */
+.lamp-container {
+    position: relative; /* Posiziona l'immagine in modo relativo */
+    margin-top: 20px; /* Margine sopra l'immagine */
+    text-align: center; /* Centra il testo sotto l'immagine */
+}
+
+.image-row {
+    display: flex; /* Usa Flexbox per allineare le immagini */
+    justify-content: center; /* Centra le immagini orizzontalmente */
+    flex-wrap: wrap; /* Permette il wrapping se necessario */
+}
+
+.lampeggiante {
+    width: 150px; /* Dimensione dell'immagine */
+    height: auto; /* Mantieni il rapporto di aspetto */
+    animation: blink-slow 2s infinite; /* Lampeggio più lento */
+    border: 5px solid #8B4513; /* Contorno marrone */
+    border-radius: 10px; /* Angoli arrotondati per il contorno */
+    margin: 0 2.5mm; /* Distanza orizzontale tra le immagini */
+}
+
+.lamp-text {
+    color: red; /* Colore del testo */
+    font-size: 24px; /* Dimensione del font */
+    margin-top: 5px; /* Distanza tra l'immagine e il testo */
+    font-weight: bold; /* Grassetto per il testo */
+    transform: rotate(0deg); /* Inclinazione di 45 gradi */
+    animation: blink-slow 6s infinite; /* Lampeggio più lento */
+    white-space: pre-line; /* Consente il ritorno a capo */
+}
+
+@keyframes blink-fast {
+    0%, 100% {
+        opacity: 1; /* Visibile */
+    }
+    50% {
+        opacity: 0; /* Invisibile */
+    }
+}
+
+@keyframes blink-slow {
+    0%, 100% {
+        opacity: 1; /* Visibile */
+    }
+    50% {
+        opacity: 0.5; /* Semi-visibile */
+    }
+}
